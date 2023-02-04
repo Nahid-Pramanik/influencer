@@ -6,7 +6,10 @@
 ---------------------- */
 body{
   font-family: 'Poppins', sans-serif;
-  width: 1170px;
+}
+
+.common-class{
+  max-width: 90%;
   margin: 0 auto;
 }
 .container{
@@ -29,7 +32,6 @@ body{
 .header-content{
   display: flex;
   justify-content: space-between;
-  margin: 80px 0 50px 0;
 }
 .header-title{
   color: #3A3A3A;
@@ -38,6 +40,7 @@ body{
 }
 nav ul{
   display: flex;
+  flex-wrap: wrap;
 }
 nav ul li{
   list-style: none;
@@ -185,7 +188,7 @@ span{
 .footer{
   background: #0A0826;
   text-align: center;
-  padding: 50px;
+
 }
 .footer-title{
   color: #FFFFFF;
@@ -219,25 +222,25 @@ span{
          mobile device
 -------------------------- */
 
-@media only screen and (max-width:688px) {
-  
+@media only screen and (max-width: 688px) {
   .header-content{
-    flex-direction: column;
-    margin: 40px 0 30px 0;                            
+    flex-direction: column;                    
   }
   .header-title{
     text-align: center;
   }
-  nav ul{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  nav ul li{
-    width: 100%;
+ 
+  .collections{
+    grid-template-columns: repeat(1, 1fr);
   }
 
-
-  .container, footer{
-    display: none;
+  .about{
+    flex-direction: column-reverse;
+  }
+  .logos{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .futures{
+    flex-direction: column-reverse;
   }
 }
